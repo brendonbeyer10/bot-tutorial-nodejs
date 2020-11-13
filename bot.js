@@ -9,13 +9,9 @@ function respond() {
   
   var prob = twss.prob(request)
   
-  postMessage(prob)
-}
-
-function postMessage(prob) {
   var botResponse, options, body, botReq;
 
-  botResponse = prob
+  botResponse = "prob is: " + prob
 
   options = {
     hostname: 'api.groupme.com',
