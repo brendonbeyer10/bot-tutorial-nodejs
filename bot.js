@@ -1,17 +1,14 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var twss = require('twss');
 
 var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
-  
-  var prob = twss.prob(request)
-  
+    
   var botResponse, options, body, botReq;
 
-  botResponse = "prob is: " + prob
+  botResponse = "response"
 
   options = {
     hostname: 'api.groupme.com',
