@@ -1,27 +1,21 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var twss = require('twss');
 
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/;
-
-  if(request.text && botRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
+  var request = JSON.parse(this.req.chunks[0])
+  
+  var prob = twss.prob(request)
+  
+  postMessage(prob)
 }
 
-function postMessage() {
+function postMessage(prob) {
   var botResponse, options, body, botReq;
 
-  botResponse = "This is the response"
+  botResponse = prob
 
   options = {
     hostname: 'api.groupme.com',
