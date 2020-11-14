@@ -9,7 +9,7 @@
   "dependencies": {
     "cool-ascii-faces": "~1.3.x",
     "director": "^1.2.8",
-    "twss": "^0.1.6"
+    "twss": "github:161siegels/twss.js"
   },
   "engines": {
     "node": "10.x"
