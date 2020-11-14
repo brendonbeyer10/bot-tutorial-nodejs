@@ -14,7 +14,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
   
-  var resp1 = 'Threshold: ' + twss.prob(request.text)
+  var resp1 = 'original text: ' + request.text + '. Threshold: ' + twss.prob(request.text)
 
   botResponse = resp1
 
