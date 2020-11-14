@@ -1,19 +1,22 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var twss = require('twss');
 
 var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
   if(request.name != 'Jakebot'){
-    postMessage(request) 
+    if(twss.is(request.text)){
+        postMessage(request) 
+    }
   }
 }
 
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  botResponse = request.text
+  botResponse = "That's what Joe said"
 
   options = {
     hostname: 'api.groupme.com',
