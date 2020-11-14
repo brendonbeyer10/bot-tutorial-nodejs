@@ -5,13 +5,13 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
-  postMessage()
+  postMessage(request)
 }
 
-function postMessage() {
+function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  botResponse = "BIG SPENCE IS A GOD..."
+  botResponse = request
 
   options = {
     hostname: 'api.groupme.com',
