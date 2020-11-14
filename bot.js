@@ -18,10 +18,10 @@ function postMessage(request) {
   var botResponse, options, body, botReq;
   
   var resp1 = '(using default) Threshold: ' + twss.prob(request.text)
-  twss.algo = 'knn';
-  var resp2 = '. (using knn) Threshold: ' + twss.prob(request.text)
+  //twss.algo = 'knn';
+  //var resp2 = '. (using knn) Threshold: ' + twss.prob(request.text)
 
-  botResponse = resp1 + resp2
+  botResponse = resp1
 
   options = {
     hostname: 'api.groupme.com',
