@@ -7,7 +7,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
   if(request.name != 'Jakebot'){
-    twss.threshold = 0.9;
+    //twss.threshold = 0.9;
     if(twss.is(request.text)){
         postMessage(request) 
     }
@@ -17,7 +17,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  botResponse = "That's what Joe said"
+  botResponse = "That's what Joe said. Threshold: " + twss.prob(request.text)
 
   options = {
     hostname: 'api.groupme.com',
