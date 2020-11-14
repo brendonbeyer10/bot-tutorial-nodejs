@@ -5,7 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
-  postMessage(request)
+  if(request.name != 'Jakebot'){
+    postMessage(request) 
+  }
 }
 
 function postMessage(request) {
