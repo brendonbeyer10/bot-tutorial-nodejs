@@ -12,7 +12,7 @@
     "twss": "^0.1.6"
   },
   "engines": {
-    "node": "14.x"
+    "node": "0.10.x"
   },
   "repository": {
     "type": "git",
