@@ -7,6 +7,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
   if(request.name != 'Jakebot'){
+    twss.threshold = 0.9;
     if(twss.is(request.text)){
         postMessage(request) 
     }
