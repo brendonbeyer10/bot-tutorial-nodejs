@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var twss = requiree('twss');
+var twss = require('twss');
 
 var botID = process.env.BOT_ID;
 
