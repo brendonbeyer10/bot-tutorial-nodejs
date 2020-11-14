@@ -8,20 +8,21 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0])
   if(request.name != 'Jakebot'){
     //twss.threshold = 0.9;
-    //if(twss.is(request.text)){
+    twss.algo = 'knn';
+    if(twss.is(request.text)){
         postMessage(request) 
-    //}
+    }
   }
 }
 
 function postMessage(request) {
   var botResponse, options, body, botReq;
   
-  var resp1 = '(using default) Threshold: ' + twss.prob(request.text)
+  //var resp1 = '(using default) Threshold: ' + twss.prob(request.text)
   //twss.algo = 'knn';
   //var resp2 = '. (using knn) Threshold: ' + twss.prob(request.text)
 
-  botResponse = resp1
+  botResponse = "That's what joe said"
 
   options = {
     hostname: 'api.groupme.com',
