@@ -16,7 +16,7 @@ function postMessage(request) {
   var botResponse, options, body, botReq;
   
   //var resp1 = 'original text: ' + request.text + '. @Jake Joe wants you. Threshold: ' + twss.prob(request.text)
-  var resp1 = emoji.get('rice')
+  var resp1 = emoji.get('rice');
   botResponse = resp1
 
   options = {
