@@ -1,6 +1,7 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 var twss = require('twss');
+var emoji = require('node-emoji');
 
 var botID = process.env.BOT_ID;
 
@@ -15,7 +16,7 @@ function postMessage(request) {
   var botResponse, options, body, botReq;
   
   //var resp1 = 'original text: ' + request.text + '. @Jake Joe wants you. Threshold: ' + twss.prob(request.text)
-  var resp1 = request.text + '.' + request.name;
+  var resp1 = emoji.get('rice')
   botResponse = resp1
 
   options = {
