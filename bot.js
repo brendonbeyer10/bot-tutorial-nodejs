@@ -7,7 +7,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0])
-  if(request.name == 'Alex Spungen'){ // == 'Photoshop God'
+  if(request.name == 'Alex Spungen'){
         postMessage(request) 
   }
 }
